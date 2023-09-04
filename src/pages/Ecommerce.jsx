@@ -5,8 +5,8 @@ import { useStateContext } from '../contexts/ContextProvider';
 import { earningData, SparklineAreaData, ecomPieChartData, recentTransactions } from '../data/dummy';
 import CopyToClipboard from '../components/CopytoClipboard';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-
-
+import Budget from '../assets/budget.png'
+import Transfer from '../assets/transfer.png'
 
 // linense key = ORg4AjUWIQA/Gnt2V1hhQlJAfV5AQmBIYVp/TGpJfl96cVxMZVVBJAtUQF1hSn5bdURjXn9WcXFUQ2Bf
 
@@ -59,7 +59,100 @@ const Ecommerce = () => {
           </div>
       </div>
      
+      <div className="flex gap-10 flex-wrap justify-center">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780  ">
+          <div className="flex justify-between">
+            <p>Revenue Updates</p>
 
+            <div className="flex items-center gap-4">
+              <p className="flex items-center gap-2 text-gray-900 hover:drop-shadow-xl">
+              <span className='font-extrabold text-4xl'>
+                  <GoDot />
+
+                </span>
+                <span className='font-semibold text-xl'>
+                  Cashout
+                </span>
+                
+              </p>
+
+
+              <p className="flex items-center gap-2 text-gray-400 hover:drop-shadow-xl">
+                <span className='font-extrabold text-4xl'>
+                  <GoDot />
+
+                </span>
+                <span className='font-semibold text-xl'>
+                  Transfers
+                </span>
+                
+              </p>
+
+
+            </div>
+          </div>
+
+          <div className="mt-10 flex gap-10 flex-wrap justify-center">
+            <div className="border-r-1 border-color m-4 pr-10  ">
+              {/* <div className="">
+                <h4 className="">cashout</h4>
+                <h4 className="">$3604</h4>
+                <img src={Budget} alt="">
+
+                </img>
+                
+              </div> */}
+              <div className="relative">
+                <div className="h-[79px] w-[150px] rounded-2xl bg-cover bg-center relative drop-shadow-xl"
+                   style={{ backgroundImage: `url(${Budget})` }}
+                   >
+        {/* Empty div with background image */}
+                </div>
+                
+      <div className="absolute inset-0 flex items-center justify-center">
+        <p className="text-white text-lg pb-4 font-semibold">₦78,000</p>
+
+        <p className="text-white text-md pt-4 font-semibold">cashout</p>
+                  
+                </div>
+                
+              </div>
+              
+
+
+
+              <div className="relative mt-8">
+                
+                <div
+                  
+                  className="h-[79px] w-[150px] rounded-2xl bg-cover bg-center relative drop-shadow-xl"
+                  
+                  style={{ backgroundImage: `url(${Transfer})` }}
+                  
+      >
+        {/* Empty div with background image */}
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <p className="text-white text-lg pb-4 font-semibold">₦55,000</p>
+
+        <p className="text-white text-md pt-4 font-semibold">Transfer</p>
+                  
+      </div>
+    </div>
+
+    
+            </div>
+
+          <div className="">
+              <Stacked width="320px" height="360px" />
+              
+          </div>
+          </div>
+            </div>
+
+          </div>
+
+      
       <div className="flex gap-10 m-4 flex-wrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl">
           <div className="flex justify-between items-center gap-2">
@@ -89,6 +182,7 @@ const Ecommerce = () => {
               </div>
             ))}
           </div>
+      
           <div className="flex justify-between items-center mt-5 border-t-1 border-color">
             <div className="mt-3">
               <Button

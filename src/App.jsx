@@ -50,12 +50,12 @@ function App() {
 
             {/* pages */}
             <Route path='/Transactions' element={<Orders  />} />
-            <Route path='/employees' element={ <Employee /> } />
-            <Route path='/customers' element={<Customer />} />
+            <Route path='/cards' element={ <Employee /> } />
+            <Route path='/state' element={<Customer />} />
+            <Route path='/Terminals' element={<Kanban />} />
 
 
             {/* apps */}
-            <Route path='/kanban' element={<Kanban />} />
             <Route path='/editor' element={<Editor />} />
             <Route path='/calender' element={<Calender />} />
             <Route path='/color-picker' element={<ColorPicker />} />
