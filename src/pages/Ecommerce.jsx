@@ -62,15 +62,15 @@ const Ecommerce = () => {
       <div className="flex gap-10 flex-wrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780  ">
           <div className="flex justify-between">
-            <p>Revenue Updates</p>
+            <p className='font-semibold'>Revenue Updates</p>
 
             <div className="flex items-center gap-4">
               <p className="flex items-center gap-2 text-gray-900 hover:drop-shadow-xl">
-              <span className='font-extrabold text-4xl'>
+              <span className='font-extrabold text-xl'>
                   <GoDot />
 
                 </span>
-                <span className='font-semibold text-xl'>
+                <span className='font-semibold text-md'>
                   Cashout
                 </span>
                 
@@ -78,11 +78,11 @@ const Ecommerce = () => {
 
 
               <p className="flex items-center gap-2 text-gray-400 hover:drop-shadow-xl">
-                <span className='font-extrabold text-4xl'>
+                <span className='font-extrabold text-xl'>
                   <GoDot />
 
                 </span>
-                <span className='font-semibold text-xl'>
+                <span className='font-semibold text-md'>
                   Transfers
                 </span>
                 
@@ -93,20 +93,12 @@ const Ecommerce = () => {
           </div>
 
           <div className="mt-10 flex gap-10 flex-wrap justify-center">
-            <div className="border-r-1 border-color m-4 pr-10  ">
-              {/* <div className="">
-                <h4 className="">cashout</h4>
-                <h4 className="">$3604</h4>
-                <img src={Budget} alt="">
-
-                </img>
-                
-              </div> */}
+            {/* <div className="border-r-1 border-color m-4 pr-10  ">
+             
               <div className="relative">
                 <div className="h-[79px] w-[150px] rounded-2xl bg-cover bg-center relative drop-shadow-xl"
                    style={{ backgroundImage: `url(${Budget})` }}
                    >
-        {/* Empty div with background image */}
                 </div>
                 
       <div className="absolute inset-0 flex items-center justify-center">
@@ -130,7 +122,6 @@ const Ecommerce = () => {
                   style={{ backgroundImage: `url(${Transfer})` }}
                   
       >
-        {/* Empty div with background image */}
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
         <p className="text-white text-lg pb-4 font-semibold">₦55,000</p>
@@ -141,12 +132,23 @@ const Ecommerce = () => {
     </div>
 
     
-            </div>
-
-          <div className="">
+            </div> */}
+          {/* <div>
               <Stacked width="320px" height="360px" />
               
-          </div>
+          </div> */}
+            <div className="mb-10">
+              <p className="text-2xl font-semibold tracking-tight">
+                Pie Chart
+
+              </p>
+
+            </div>
+            <p className="text-center text-xl mb-2 mt-3">
+              Transaction Breakdown
+              
+            </p>
+
           </div>
             </div>
 
