@@ -44,6 +44,13 @@ export const gridOrderStatus = (props) => (
   </button>
 );
 
+
+export const pievalue = [
+  { name: 'Card', value: 50, text: '50%' },
+  { name: 'Transfer', value: 35, text: '35%' },
+  {name: 'Bill', value: 15, text: '15%'}
+]
+
 export const kanbanGrid = [
   { headerText: 'To Do',
     keyField: 'Open',

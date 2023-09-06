@@ -1,34 +1,47 @@
 import React from 'react'
 import {
   ChartComponent, SeriesCollectionDirective, SeriesDirective,
-Inject, Legend, Category, StackingColumnSeries, Tooltip, DataLabel, ColumnSeries
+  Inject, Legend, Category, StackingColumnSeries, Tooltip, DataLabel, ColumnSeries,
+  AccumulationChartComponent,
+  AccumulationSeriesDirective,
+  AccumulationSeriesCollectionDirective,
+  PieSeries,
+  AccumulationSeries,
+  AccumulationDataLabel,
+  AccumulationLegend, 
 } from '@syncfusion/ej2-react-charts'
 
 // import {ChartsHeader} from ''
-import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis, barPrimaryXAxis, barCustomSeries, barPrimaryYAxis } from '../data/dummy'
+import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis, barPrimaryXAxis, barCustomSeries, barPrimaryYAxis, pievalue } from '../data/dummy'
 
-function Stacked({width, height}) {
+function Stacked() {
 
   return (
-    <ChartComponent
-      width={width}
-      height={height}
-      id='charts'
-      primaryXAxis={barPrimaryXAxis}
-      primaryYAxis={barPrimaryYAxis}
-      chartArea={{ border: { width: 0 } }}
-      tooltip={{ enable: true }}
-      legendSettings={{background: 'white'}}
-      
-    >
-      <Inject services={[Legend, Category, StackingColumnSeries, Tooltip, DataLabel, ColumnSeries]} />
-      <SeriesCollectionDirective>
+    <div>
+      <AccumulationChartComponent legendSettings={{position:"Bottom"}}>
+        <Inject services={[PieSeries, AccumulationDataLabel]}></Inject>
+        <AccumulationSeriesCollectionDirective>
+          <AccumulationSeriesDirective
+            type='pie'
+            dataSource={pievalue}
+            xName="name"
+            yName="value"
+            dataLabel={{
+              visible: true,
+              position: 'Inside',
+               name: 'value'
+            }}
 
-        
-      </SeriesCollectionDirective>
- 
-      
-</ChartComponent>
+
+          >
+
+
+          </AccumulationSeriesDirective>
+        </AccumulationSeriesCollectionDirective>
+
+      </AccumulationChartComponent>
+    </div>
+   
   )
 }
 

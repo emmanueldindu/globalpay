@@ -146,6 +146,7 @@ const Ecommerce = () => {
             </div>
             <p className="text-center text-xl mb-2 mt-3">
               Transaction Breakdown
+              <Stacked  />
               
             </p>
 
